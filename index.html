@@ -6,13 +6,23 @@
   <title>Charley Sanchez | Machine Learning Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #f9fafb;
+      --text-color: #333;
+      --card-bg: #fff;
+    }
+    [data-theme="dark"] {
+      --bg-color: #1a1a1a;
+      --text-color: #f5f5f5;
+      --card-bg: #2a2a2a;
+    }
     body {
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background: #f9fafb;
-      color: #333;
+      background: var(--bg-color);
+      color: var(--text-color);
     }
     header {
       background: #111;
@@ -49,7 +59,7 @@
       padding: 2rem;
     }
     h2 {
-      color: #222;
+      color: var(--text-color);
     }
     .projects-grid {
       display: grid;
@@ -58,7 +68,7 @@
     }
     .project {
       padding: 1rem;
-      background: #fff;
+      background: var(--card-bg);
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -66,15 +76,37 @@
       color: #0077cc;
       text-decoration: none;
     }
+    .project img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
     footer {
       text-align: center;
       padding: 2rem;
       background: #111;
       color: #ccc;
     }
+    .toggle-button {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: #4f46e5;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .resume {
+      text-align: center;
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
+  <button class="toggle-button" onclick="toggleTheme()">Toggle Theme</button>
+
   <header>
     <h1>Charley Sanchez</h1>
     <p>Machine Learning Engineer | Master's in AI | Project-Focused & Production-Ready</p>
@@ -83,11 +115,15 @@
   <div class="hero">
     <h1>Hi, I’m Charley 👋</h1>
     <p>I build machine learning systems that actually work. From research to real-time pipelines, I care about robustness, performance, and clarity.</p>
+    <div class="resume">
+      <a href="Charley_Sanchez_Resume.pdf" download style="color:#4f46e5; font-weight:600;">Download My Resume</a>
+    </div>
   </div>
 
   <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
+    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -95,14 +131,17 @@
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project">
+        <img src="https://placehold.co/600x300?text=Spurious+Analysis" alt="Spurious Analysis">
         <h3><a href="https://github.com/metehanberker1/pretrained-encoders-spurious-learning-analysis" target="_blank">Spurious Feature Analysis</a></h3>
         <p>Studied BERT’s reliance on spurious features using counterfactual data and token-level interpretability tools.</p>
       </div>
       <div class="project">
+        <img src="https://placehold.co/600x300?text=EMG+QWERTY" alt="EMG Neural Interface">
         <h3><a href="https://github.com/charleysanchez/SOTA-4" target="_blank">EMG-to-QWERTY Neural Interface</a></h3>
         <p>Extended Meta’s EMG decoding pipeline with improved preprocessing and modeling for real-time character prediction.</p>
       </div>
       <div class="project">
+        <img src="https://placehold.co/600x300?text=More+Projects" alt="More Projects">
         <h3><a href="https://github.com/charleysanchez" target="_blank">More on GitHub</a></h3>
         <p>Check out my other projects, including RAG pipelines, LLM interpretability, and deep learning tooling.</p>
       </div>
@@ -112,6 +151,11 @@
   <section id="about">
     <h2>About Me</h2>
     <p>I’m a Master’s student in Artificial Intelligence with a focus on building and debugging ML systems — from data pipelines to model performance analysis. I’m especially interested in NLP, interpretability, and pushing models to be both useful and understandable.</p>
+  </section>
+
+  <section id="blog">
+    <h2>Blog & Notes</h2>
+    <p>I occasionally write about my experiments and learning in machine learning. Coming soon: write-ups on spurious feature detection, RAG debugging, and EMG signal preprocessing.</p>
   </section>
 
   <section id="contact">
@@ -124,5 +168,12 @@
   <footer>
     <p>&copy; 2025 Charley Sanchez. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      const theme = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", theme === "dark" ? "light" : "dark");
+    }
+  </script>
 </body>
 </html>
