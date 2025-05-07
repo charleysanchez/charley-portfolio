@@ -84,6 +84,17 @@
       border-radius: 6px;
       margin-bottom: 0.5rem;
     }
+    .skills, .featured, .now-section {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-top: 2rem;
+    }
+    .skills ul, .blog ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -125,6 +136,8 @@
 
   <nav>
     <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#featured">Featured</a>
     <a href="#about">About</a>
     <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
@@ -151,6 +164,23 @@
     </div>
   </section>
 
+  <section id="skills" class="skills">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, SQL, Bash</li>
+      <li><strong>ML Frameworks:</strong> PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers</li>
+      <li><strong>Data:</strong> Pandas, NumPy, Spark</li>
+      <li><strong>Deployment:</strong> Docker, FastAPI, AWS</li>
+      <li><strong>Experiment Tracking:</strong> Weights & Biases, MLflow</li>
+    </ul>
+  </section>
+
+  <section id="featured" class="featured">
+    <h2>Featured Case Study</h2>
+    <h3>Counterfactual Spurious Correlation Analysis in Pretrained Encoders</h3>
+    <p>This research-driven project used the DECOMPX interpretability toolkit to test how BERT and RoBERTa rely on spurious features in text classification tasks. I created a counterfactual dataset and showed that contrastive adversarial examples reduced spurious reliance by 15%, improving generalization on underrepresented examples. <a href="https://github.com/metehanberker1/pretrained-encoders-spurious-learning-analysis" target="_blank">View full project</a></p>
+  </section>
+
   <section id="about">
     <h2>About Me</h2>
     <p>I’m a Master’s student in Artificial Intelligence at UCLA, graduating in September 2025. I focus on building and debugging ML systems — from data pipelines to model performance analysis. I’m especially interested in NLP, interpretability, and pushing models to be both useful and understandable.</p>
@@ -166,6 +196,12 @@
       <li>📈 Visualizing model attention and token attribution</li>
     </ul>
     <p>More detailed posts coming soon as I clean and publish my notes!</p>
+  </section>
+
+  <section class="now-section">
+    <h2>What I'm Doing Now</h2>
+    <p>🔎 Currently applying for Fall 2025 machine learning engineer roles.</p>
+    <p>🛠️ Developing a multi-agent LLM evaluation framework and documenting my interpretability toolkit experiments.</p>
   </section>
 
   <section id="contact">
