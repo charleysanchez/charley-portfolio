@@ -10,11 +10,13 @@
       --bg-color: #f9fafb;
       --text-color: #333;
       --card-bg: #fff;
+      --hero-bg: #eef4ff;
     }
     [data-theme="dark"] {
       --bg-color: #1a1a1a;
       --text-color: #f5f5f5;
       --card-bg: #2a2a2a;
+      --hero-bg: #2f3542;
     }
     body {
       font-family: 'Inter', sans-serif;
@@ -40,9 +42,10 @@
       text-decoration: none;
     }
     .hero {
-      background: #eef4ff;
+      background: var(--hero-bg);
       padding: 3rem 1rem;
       text-align: center;
+      color: var(--text-color);
     }
     .hero h1 {
       font-size: 2.5rem;
@@ -150,12 +153,19 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a Master’s student in Artificial Intelligence with a focus on building and debugging ML systems — from data pipelines to model performance analysis. I’m especially interested in NLP, interpretability, and pushing models to be both useful and understandable.</p>
+    <p>I’m a Master’s student in Artificial Intelligence at UCLA, graduating in September 2025. I focus on building and debugging ML systems — from data pipelines to model performance analysis. I’m especially interested in NLP, interpretability, and pushing models to be both useful and understandable.</p>
   </section>
 
   <section id="blog">
     <h2>Blog & Notes</h2>
-    <p>I occasionally write about my experiments and learning in machine learning. Coming soon: write-ups on spurious feature detection, RAG debugging, and EMG signal preprocessing.</p>
+    <p>I occasionally write about my experiments and learning in machine learning. Topics I’m working on include:</p>
+    <ul>
+      <li>🔍 Detecting spurious correlations in pretrained encoders</li>
+      <li>🔧 Debugging and optimizing RAG systems</li>
+      <li>🧠 Building usable interfaces for EMG-based character prediction</li>
+      <li>📈 Visualizing model attention and token attribution</li>
+    </ul>
+    <p>More detailed posts coming soon as I clean and publish my notes!</p>
   </section>
 
   <section id="contact">
