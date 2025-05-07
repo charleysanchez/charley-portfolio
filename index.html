@@ -4,19 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charley Sanchez | Machine Learning Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
+      background: #f9fafb;
       color: #333;
     }
     header {
       background: #111;
       color: #fff;
-      padding: 1.5rem 2rem;
+      padding: 2rem;
       text-align: center;
     }
     nav {
@@ -25,22 +26,41 @@
     }
     nav a {
       margin: 0 1rem;
-      color: #0077cc;
+      color: #4f46e5;
       text-decoration: none;
     }
+    .hero {
+      background: #eef4ff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 2rem;
-      background: #fff;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     h2 {
       color: #222;
     }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
     .project {
-      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
     .project a {
       color: #0077cc;
@@ -60,6 +80,11 @@
     <p>Machine Learning Engineer | Master's in AI | Project-Focused & Production-Ready</p>
   </header>
 
+  <div class="hero">
+    <h1>Hi, I’m Charley 👋</h1>
+    <p>I build machine learning systems that actually work. From research to real-time pipelines, I care about robustness, performance, and clarity.</p>
+  </div>
+
   <nav>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
@@ -68,23 +93,25 @@
 
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3><a href="https://github.com/metehanberker1/pretrained-encoders-spurious-learning-analysis" target="_blank">Spurious Feature Analysis in Pretrained Models</a></h3>
-      <p>Investigated how BERT and RoBERTa handle spurious correlations using counterfactual data and token-level interpretability tools. Improved model robustness with CAD techniques.</p>
-    </div>
-    <div class="project">
-      <h3><a href="https://github.com/charleysanchez/SOTA-4" target="_blank">EMG-to-QWERTY Neural Interface</a></h3>
-      <p>Extended Meta's emg2qwerty to improve model performance for EMG signal decoding. Built data pipelines, model enhancements, and evaluation framework.</p>
-    </div>
-    <div class="project">
-      <h3><a href="https://github.com/charleysanchez" target="_blank">More on GitHub</a></h3>
-      <p>Explore my other work, including LLM experiments, interpretability tools, and RAG-based pipelines.</p>
+    <div class="projects-grid">
+      <div class="project">
+        <h3><a href="https://github.com/metehanberker1/pretrained-encoders-spurious-learning-analysis" target="_blank">Spurious Feature Analysis</a></h3>
+        <p>Studied BERT’s reliance on spurious features using counterfactual data and token-level interpretability tools.</p>
+      </div>
+      <div class="project">
+        <h3><a href="https://github.com/charleysanchez/SOTA-4" target="_blank">EMG-to-QWERTY Neural Interface</a></h3>
+        <p>Extended Meta’s EMG decoding pipeline with improved preprocessing and modeling for real-time character prediction.</p>
+      </div>
+      <div class="project">
+        <h3><a href="https://github.com/charleysanchez" target="_blank">More on GitHub</a></h3>
+        <p>Check out my other projects, including RAG pipelines, LLM interpretability, and deep learning tooling.</p>
+      </div>
     </div>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>I’m a Master’s student in Artificial Intelligence with a focus on real-world applications of machine learning, from NLP and time-series modeling to large model interpretability and deployment. I enjoy working across the stack — building robust training pipelines, improving model generalization, and analyzing where things break (and fixing them).</p>
+    <p>I’m a Master’s student in Artificial Intelligence with a focus on building and debugging ML systems — from data pipelines to model performance analysis. I’m especially interested in NLP, interpretability, and pushing models to be both useful and understandable.</p>
   </section>
 
   <section id="contact">
